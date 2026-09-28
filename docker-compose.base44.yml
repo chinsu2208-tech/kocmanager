@@ -28,9 +28,9 @@ services:
           "require('http').get('http://localhost:3000/',r=>process.exit(r.statusCode<600?0:1)).on('error',()=>process.exit(1))",
         ]
       interval: 15s
-      timeout: 5s
+      timeout: 15s
       retries: 5
-      start_period: 60s
+      start_period: 90s
 
 volumes:
   node_modules:
