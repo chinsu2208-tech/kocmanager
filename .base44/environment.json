@@ -1,0 +1,17 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "NEXT_PUBLIC_SUPABASE_URL",
+      "description": "Supabase Project URL from Project Settings → API. Required for the app to actually read/write data; placeholder is in .env.base44-defaults until provided.",
+      "requiredAtBoot": false
+    },
+    {
+      "name": "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+      "description": "Supabase anon public key from Project Settings → API. Also run supabase/schema.sql in the SQL Editor to create the tables.",
+      "requiredAtBoot": false
+    }
+  ]
+}
